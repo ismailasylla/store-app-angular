@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonNormalComponent } from './button-normal.component';
+import { CounterComponent } from './counter.component';
 
-describe('ButtonNormalComponent', () => {
-  let component: ButtonNormalComponent;
-  let fixture: ComponentFixture<ButtonNormalComponent>;
+describe('CounterComponent', () => {
+  let component: CounterComponent;
+  let fixture: ComponentFixture<CounterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ButtonNormalComponent ]
+      declarations: [ CounterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonNormalComponent);
+    fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
