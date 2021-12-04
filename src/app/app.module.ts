@@ -9,6 +9,9 @@ import { CounterComponent } from './components/counter/counter.component';
 import { CounterButtonComponent } from './components/counter-button/counter-button.component';
 import { CounterOutputComponent } from './components/counter-output/counter-output.component';
 import { MaterialModule } from './shared/material/material.module';
+import { counterReducer } from './components/counter/store/counter.reducer';
+
+
 
 
 @NgModule({
@@ -21,9 +24,9 @@ import { MaterialModule } from './shared/material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({counter: counterReducer}, {}),
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
