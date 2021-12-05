@@ -10,6 +10,8 @@ import { CounterButtonComponent } from './components/counter-button/counter-butt
 import { CounterOutputComponent } from './components/counter-output/counter-output.component';
 import { MaterialModule } from './shared/material/material.module';
 import { counterReducer } from './components/counter/store/counter.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -27,6 +29,11 @@ import { counterReducer } from './components/counter/store/counter.reducer';
     StoreModule.forRoot({counter: counterReducer}, {}),
     BrowserAnimationsModule,
     MaterialModule,
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+      autoPause: true, // Pauses recording actions and state changes when the extension window is not open
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
