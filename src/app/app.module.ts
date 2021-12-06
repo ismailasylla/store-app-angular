@@ -9,9 +9,11 @@ import { CounterComponent } from './components/counter/counter.component';
 import { CounterButtonComponent } from './components/counter-button/counter-button.component';
 import { CounterOutputComponent } from './components/counter-output/counter-output.component';
 import { MaterialModule } from './shared/material/material.module';
-import { counterReducer } from './components/counter/store/counter.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { PostsListComponent } from './components/posts/posts-list/posts-list.component';
+import { appReducer } from './store/app.state';
+
 
 
 
@@ -22,11 +24,12 @@ import { environment } from 'src/environments/environment';
     CounterComponent,
     CounterButtonComponent,
     CounterOutputComponent,
+    PostsListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({counter: counterReducer}, {}),
+    StoreModule.forRoot(appReducer),
     BrowserAnimationsModule,
     MaterialModule,
     StoreDevtoolsModule.instrument({
