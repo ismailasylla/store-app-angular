@@ -13,6 +13,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { PostsListComponent } from './components/posts/posts-list/posts-list.component';
 import { appReducer } from './store/app.state';
+import { AddPostComponent } from './components/posts/add-post/add-post.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +27,7 @@ import { appReducer } from './store/app.state';
     CounterButtonComponent,
     CounterOutputComponent,
     PostsListComponent,
+    AddPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { appReducer } from './store/app.state';
     StoreModule.forRoot(appReducer),
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule,
     StoreDevtoolsModule.instrument({
       logOnly: environment.production, // Restrict extension to log-only mode
       autoPause: true, // Pauses recording actions and state changes when the extension window is not open
