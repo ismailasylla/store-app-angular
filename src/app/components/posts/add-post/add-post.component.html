@@ -16,7 +16,7 @@
       <mat-error  *ngIf="postForm.get('description')?.errors?.required">Description is required.</mat-error>
       <mat-error  *ngIf="postForm.get('description')?.errors?.minlength">Description should be of minimum 10 characters.</mat-error>
     </div>
-    <button mat-raised-button color="primary">Add Post</button>
+    <button mat-raised-button color="primary" [disabled]="!postForm.valid">Add Post</button>
   </form>
 </div>
 
