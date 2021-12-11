@@ -12,7 +12,7 @@ import { getPosts } from './store/posts.selector';
 })
 export class PostsListComponent implements OnInit {
   posts!:Observable<Post[]>
-  displayedColumns: string[] = ['id', 'title', 'description'];
+  displayedColumns: string[] = ['id', 'title', 'description', 'actions'];
   dataSource = this.posts;
   
   constructor(private store: Store<AppState>) { 

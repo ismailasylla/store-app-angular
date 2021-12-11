@@ -15,6 +15,11 @@ import { PostsListComponent } from './components/posts/posts-list/posts-list.com
 import { appReducer } from './store/app.state';
 import { AddPostComponent } from './components/posts/add-post/add-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditPostComponent } from './components/posts/edit-post/edit-post.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/common/header/header.component';
+import { AboutComponent } from './components/about/about.component';
+
 
 
 
@@ -28,6 +33,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     CounterOutputComponent,
     PostsListComponent,
     AddPostComponent,
+    EditPostComponent,
+    HomeComponent,
+    HeaderComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,43 @@
 <div class="container">
-  <form class="example-form" [formGroup]='postForm' (ngSubmit)="addPost()">
+  <form class="example-form" [formGroup]="postForm" (ngSubmit)="addPost()">
+    <H1>ADD POST</H1>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Title</mat-label>
-      <input matInput placeholder="Title" value="" formControlName="title">
+      <input matInput placeholder="Title" value="" formControlName="title" />
     </mat-form-field>
-    <div *ngIf="postForm.get('title')?.touched && !postForm.get('title')?.valid">
-      <mat-error *ngIf="postForm.get('title')?.errors?.required">Title is required.</mat-error>
-      <mat-error *ngIf="postForm.get('title')?.errors?.minlength">Title should be of minimum 3 characters.</mat-error>
+    <div
+      *ngIf="postForm.get('title')?.touched && !postForm.get('title')?.valid"
+    >
+      <mat-error *ngIf="postForm.get('title')?.errors?.required"
+        >Title is required.</mat-error
+      >
+      <mat-error *ngIf="postForm.get('title')?.errors?.minlength"
+        >Title should be of minimum 3 characters.</mat-error
+      >
     </div>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Description</mat-label>
-      <textarea matInput placeholder="Enter Post Description..." formControlName="description"></textarea>
+      <textarea
+        matInput
+        placeholder="Enter Post Description..."
+        formControlName="description"
+      ></textarea>
     </mat-form-field>
-    <div *ngIf="postForm.get('description')?.touched && !postForm.get('description')?.valid">
-      <mat-error  *ngIf="postForm.get('description')?.errors?.required">Description is required.</mat-error>
-      <mat-error  *ngIf="postForm.get('description')?.errors?.minlength">Description should be of minimum 10 characters.</mat-error>
+    <div
+      *ngIf="
+        postForm.get('description')?.touched &&
+        !postForm.get('description')?.valid
+      "
+    >
+      <mat-error *ngIf="postForm.get('description')?.errors?.required"
+        >Description is required.</mat-error
+      >
+      <mat-error *ngIf="postForm.get('description')?.errors?.minlength"
+        >Description should be of minimum 10 characters.</mat-error
+      >
     </div>
-    <button mat-raised-button color="primary" [disabled]="!postForm.valid">Add Post</button>
+    <button mat-raised-button color="primary" [disabled]="!postForm.valid">
+      Add Post
+    </button>
   </form>
 </div>
-

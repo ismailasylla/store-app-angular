@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
-
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -14,12 +14,16 @@ import {MatInputModule} from '@angular/material/input';
     CommonModule,
     MatButtonModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   exports:[
     MatButtonModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    MatToolbarModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }
