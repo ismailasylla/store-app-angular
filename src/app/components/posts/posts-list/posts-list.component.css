@@ -1,9 +1,13 @@
 table {
-  width: 100%;
+  width: 60%;
   margin: 50px;
 }
 
 .container {
   display: flex;
   justify-content: center;
+}
+
+button {
+  margin: 5px;
 }
